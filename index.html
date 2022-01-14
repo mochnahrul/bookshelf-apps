@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf Apps</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Section Begin -->
+  <header class="head_bar">
+    <h1 class="head_bar__title">Bookshelf Apps</h1>
+  </header>
+  <!-- Header End -->
+
+  <!-- Main Section Begin -->
+  <main>
+    <!-- Input Section Begin -->
+    <section class="input_section">
+      <h2>Insert New Book</h2>
+      <form id="inputBook">
+        <div class="input">
+          <label for="inputBookTitle">Title</label>
+          <input id="inputBookTitle" type="text" autocomplete="off" required>
+        </div>
+        <div class="input">
+          <label for="inputBookAuthor">Author</label>
+          <input id="inputBookAuthor" type="text" autocomplete="off" required>
+        </div>
+        <div class="input">
+          <label for="inputBookYear">Year</label>
+          <input id="inputBookYear" type="number" autocomplete="off" required>
+        </div>
+        <div class="input_inline">
+          <label for="inputBookIsComplete">Read bookshelf</label>
+          <input id="inputBookIsComplete" type="checkbox">
+        </div>
+        <button id="bookSubmit" type="submit">Submit</button>
+      </form>
+    </section>
+    <!-- Input End -->
+
+    <!-- Search Section Begin -->
+    <section class="search_section">
+      <h2>Search Book</h2>
+      <form id="searchBook">
+        <label for="searchBookTitle">Title</label>
+        <input id="searchBookTitle" type="text" autocomplete="off">
+        <button id="searchSubmit" type="submit">Search</button>
+      </form>
+    </section>
+    <!-- Search End -->
+
+    <!-- Incomplete Bookshelf Section Begin -->
+    <section class="book_shelf">
+      <h2>Unread Bookshelf</h2>
+      <div id="incompleteBookshelfList" class="book_list">
+      </div>
+    </section>
+    <!-- Incomplete Bookshelf End -->
+
+    <!-- Complete Bookshelf Section Begin -->
+    <section class="book_shelf">
+      <h2>Read Bookshelf</h2>
+      <div id="completeBookshelfList" class="book_list">
+      </div>
+    </section>
+    <!-- Complete Bookshelf End -->
+  </main>
+  <!-- Main End -->
+
+  <!-- JavaScript -->
+  <script src="js/storage.js"></script>
+  <script src="js/dom.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
